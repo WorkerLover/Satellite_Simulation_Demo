@@ -63,7 +63,7 @@ public abstract class DTNSimUI {
 	
 	/** configuration_file's location*/
 	private static final String CONFIGURATION_FILE_LOCATION = 
-			"C:\\Users\\Administrator\\Desktop\\one\\src\\one_\\default_settings.txt";
+			"E:\\Users\\Ive\\Workspaces\\MyEclipse 2015 CI\\one_test\\default_settings.txt";
 
 	/** The World where all actors of the simulator are */
 	protected World world;
