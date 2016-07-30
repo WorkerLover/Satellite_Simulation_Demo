@@ -97,11 +97,11 @@ public abstract class DTNSimUI {
 	/**
 	 * Starts the simulation.
 	 */
-	public void start(Configuration config) {
+	public void start(Configuration config,boolean flag) {
 		/**将图形界面参数写入配置文件*/
 		addSettings(config);
 		/**将图形界面参数写入配置文件*/
-		initModel(config);
+		initModel(config,flag);
 	//	runSim();
 	}
 	
@@ -113,12 +113,12 @@ public abstract class DTNSimUI {
 	/**
 	 * Initializes the simulator model.
 	 */
-	private void initModel(Configuration config) {
+	private void initModel(Configuration config,boolean flag) {
 		Settings settings = null;
 				
 		try {
 			settings = new Settings();
-			this.scen = SimScenario.getInstance(config);
+			this.scen = SimScenario.getInstance(config,flag);
 
 			// add reports
 			for (int i=1, n = settings.getInt(NROF_REPORT_S); i<=n; i++){

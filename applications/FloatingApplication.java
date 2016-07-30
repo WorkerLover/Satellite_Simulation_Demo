@@ -309,7 +309,7 @@ public class FloatingApplication extends Application {
      * @return host
      */
     private DTNHost destinationHost() {
-	World w = SimScenario.getInstance(config).getWorld();
+	World w = SimScenario.getInstance(config,true).getWorld();
 	return w.getNodeByAddress(destination);
     }
     

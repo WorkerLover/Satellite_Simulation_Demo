@@ -165,7 +165,7 @@ public class FloatingContentSummaryReport extends Report implements MessageListe
      */
     public FloatingContentSummaryReport() {
 	init();
-	scen = SimScenario.getInstance (config);
+	scen = SimScenario.getInstance (config,true);
     }
     
     @Override

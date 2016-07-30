@@ -37,6 +37,8 @@ public class DTNSim {
 	/** List of class names that should be reset between batch runs */
 	private static List<Class<?>> resetList = new ArrayList<Class<?>>();
 	
+	private static boolean flag = false;
+	
 	private static orbitviewerGUI theApplet;
 	static int appletwidth = 900; // Width of Applet
 	static int appletheight = 700;
@@ -98,6 +100,9 @@ public class DTNSim {
 		initSettings(confFiles, firstConfIndex);
 		
 		if (batchMode) {
+			
+			flag = true;
+			
 			long startTime = System.currentTimeMillis();
 			for (int i=nrofRuns[0]; i<nrofRuns[1]; i++) {
 				print("Run " + (i+1) + "/" + nrofRuns[1]);
@@ -121,11 +126,14 @@ public class DTNSim {
 			}
 		}
 		else {
+			
+			flag = false;
+			
 			Settings.setRunIndex(guiIndex);
 			DSG = new DTNSimGUI();
 			config = new Configuration();
 			//new DTNSimGUI().start(config);
-			DSG.start(config);
+			DSG.start(config,flag);
 			DSG.runSim();		
 		}
 	}

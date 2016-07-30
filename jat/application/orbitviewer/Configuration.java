@@ -8,8 +8,8 @@ public class Configuration {
 	orbitviewerGUI d;
 	
 	public Configuration() {
-		default_numbers = 1;
-		random_numbers = 1;
+		default_numbers = 0;
+		random_numbers = 48;
 		user_config_numbers = 0;
 		parameter[0] = 8000.0;
 		parameter[1] = 0.1;

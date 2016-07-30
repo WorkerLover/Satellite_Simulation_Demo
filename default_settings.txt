@@ -1,5 +1,5 @@
 #-----------------
-#Sat Jul 30 11:45:19 CST 2016
+#Sat Jul 30 16:56:39 CST 2016
 MapBasedMovement.mapFile4=data/shops.wkt
 MapBasedMovement.mapFile3=data/pedestrian_paths.wkt
 MapBasedMovement.mapFile2=data/main_roads.wkt
@@ -37,14 +37,14 @@ Scenario.updateInterval=0.1
 Group.msgPathLabel=false
 Optimization.cellSizeMult=5
 Group.router=DijsktraRouter
-Group.bufferSize=5M
 Events1.size=500k,1M
+Group.bufferSize=5M
 Group.defaultNumbers=0
 Events1.interval=25,35
-GUI.EventLogPanel.nrofEvents=100
 Report.reportDir=reports/
-MovementModel.warmup=1000
+GUI.EventLogPanel.nrofEvents=100
 Interface.transmitSpeed=250k
+MovementModel.warmup=1000
 Report.report1=MessageStatsReport
 Events1.hosts=0,48
 highspeedInterface.transmitRange=1000

@@ -144,7 +144,7 @@ public class SimScenario implements Serializable {
 	/**
 	 * Creates a scenario based on Settings object.
 	 */
-	protected SimScenario(Configuration config) {
+	protected SimScenario(Configuration config,boolean flag) {
 		
 		Settings s = new Settings(SCENARIO_NS);
 		nrofGroups = s.getInt(NROF_GROUPS_S);
@@ -176,8 +176,10 @@ public class SimScenario implements Serializable {
 		
 		//生成所有卫星节点，并且刷新图形界面，从而显示三维和二维界面
 		createHosts(config);
-		config.getd().geto().getPlot().removeAllPlots();
-		config.getd().geto().add_scene(this.hosts,true);
+		if(flag == true) {
+			config.getd().geto().getPlot().removeAllPlots();
+			config.getd().geto().add_scene(this.hosts,true);
+		}	
 		//生成所有卫星节点，并且刷新图形界面，从而显示三维和二维界面
 		
 		this.world = new World(hosts, worldSizeX, worldSizeY, updateInterval, 
@@ -188,9 +190,9 @@ public class SimScenario implements Serializable {
 	/**
 	 * Returns the SimScenario instance and creates one if it doesn't exist yet
 	 */
-	public static SimScenario getInstance(Configuration config) {
+	public static SimScenario getInstance(Configuration config,boolean flag) {
 		if (myinstance == null) {
-			myinstance = new SimScenario(config);
+			myinstance = new SimScenario(config,flag);
 		}
 		return myinstance;
 	}

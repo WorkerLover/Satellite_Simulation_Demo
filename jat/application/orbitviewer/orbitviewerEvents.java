@@ -68,7 +68,7 @@ public class orbitviewerEvents implements ActionListener, ItemListener {
 			config.d = this.d;
 	//		d.o.plot.removeAllPlots();
 			DSTUI = new DTNSimTextUI();
-		    DSTUI.start(config);
+		    DSTUI.start(config,true);
 			System.out.println("Insert Done!");
 		}
 		if(ev.getSource() == d.setButton2) {

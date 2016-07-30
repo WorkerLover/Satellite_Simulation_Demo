@@ -160,7 +160,7 @@ public class PingApplication extends Application {
 			destaddr = destMin;
 		}
 		destaddr = destMin + rng.nextInt(destMax - destMin);
-		World w = SimScenario.getInstance(config).getWorld();
+		World w = SimScenario.getInstance(config,true).getWorld();
 		return w.getNodeByAddress(destaddr);
 	}
 	
