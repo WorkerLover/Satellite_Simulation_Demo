@@ -6,6 +6,8 @@ import jat.coreNOSA.algorithm.integrators.Printable;
 import jat.coreNOSA.cm.TwoBody;
 import jat.coreNOSA.cm.cm;
 
+import core.Settings;
+
 /** 
  * Copyright(C),2016-2020,USTC.
  * FileName:SatelliteOrbit.java
@@ -113,7 +115,8 @@ public class SatelliteOrbit implements Printable {
 	//overwrite;
 	public SatelliteOrbit(boolean multi_orbit,int order) {
 		if(multi_orbit==true) {
-			satellite_numbers = 24;
+			Settings settings = new Settings();
+			satellite_numbers = settings.getInt("Group.randomNumbers");
 			orbit_numbers = 3;
 			phrase = 2;
 			int s = satellite_numbers/orbit_numbers;

@@ -1,5 +1,5 @@
 #-----------------
-#Thu Jul 28 15:25:42 CST 2016
+#Sat Jul 30 11:45:19 CST 2016
 MapBasedMovement.mapFile4=data/shops.wkt
 MapBasedMovement.mapFile3=data/pedestrian_paths.wkt
 MapBasedMovement.mapFile2=data/main_roads.wkt
@@ -28,24 +28,25 @@ SprayAndWaitRouter.nrofCopies=6
 GUI.UnderlayImage.scale=4.75
 highspeedInterface.transmitSpeed=10M
 MovementModel.rngSeed=1
-Group.randomNumbers=24
+Group.randomNumbers=48
 Group1.groupID=satellite
 GUI.UnderlayImage.fileName=data/helsinki_underlay.png
 MapBasedMovement.nrofMapFiles=4
 Scenario.nrofHostGroups=1
 Scenario.updateInterval=0.1
+Group.msgPathLabel=false
 Optimization.cellSizeMult=5
 Group.router=DijsktraRouter
-Events1.size=500k,1M
 Group.bufferSize=5M
+Events1.size=500k,1M
 Group.defaultNumbers=0
 Events1.interval=25,35
-Report.reportDir=reports/
 GUI.EventLogPanel.nrofEvents=100
-Interface.transmitSpeed=250k
+Report.reportDir=reports/
 MovementModel.warmup=1000
+Interface.transmitSpeed=250k
 Report.report1=MessageStatsReport
-Events1.hosts=0,24
+Events1.hosts=0,48
 highspeedInterface.transmitRange=1000
 Group.movementModel=SatelliteMovement
 Group.speed=0.5, 1.5

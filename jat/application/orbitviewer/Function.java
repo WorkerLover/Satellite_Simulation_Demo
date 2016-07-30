@@ -140,8 +140,9 @@ public class Function extends JFrame implements Runnable{
 	}
 	
 	private void drawOrbit(GeneralPath gp, Graphics2D g2d, List<DTNHost> hosts) {
-		for(int j=0;j<hosts.size();++j) {
-			if(j==0||j==8||j==16) {
+		int length = hosts.size();
+		for(int j=0;j<length;++j) {
+			if(j==0||j==(length/3)||j==(length/3*2)) {
 			for(int i=0;i<steps;++i) {
 				gp.lineTo(3.8*hosts.get(j).getBL()[i][0], 3.8*hosts.get(j).getBL()[i][1]);
 				}

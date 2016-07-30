@@ -135,11 +135,11 @@ public class orbitviewerplot implements Printable {
 			new Thread(func).start();
 /*			System.out.println("3dcoord "+ hosts.get(0).get3Dpoints()[0][0]+
 					hosts.get(0).get3Dpoints()[0][1]+hosts.get(0).get3Dpoints()[0][2]);
-			System.out.println("jingwei "+ hosts.get(0).get2Dpoints()[0][0]+hosts.get(0).get2Dpoints()[0][1]);
-//			System.out.println("test...");
+			System.out.println("jingwei "+ hosts.get(0).get2Dpoints()[0][0]+hosts.get(0).get2Dpoints()[0][1]);*/
+			System.out.println("test...");
 //			System.out.println("testbefore");
 		//	this.sov = new suborbitviewer(hosts);
-			this.func = new Function(hosts);
+/*			this.func = new Function(hosts);
 			new Thread(func).start();
 //			System.out.println("testafter");*/
 		}
